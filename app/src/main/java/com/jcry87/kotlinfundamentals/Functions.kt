@@ -8,6 +8,9 @@ fun main(){
     val b = 3
     println("$a + $b = ${sum(a,b)}")
     println("$a - $b = ${sub(a,b)}")
+
+    showProduct("Juice", validity = "15th March")
+    showPersons("Juan","Carlos","Silvia")
 }
 
 private fun sayHello(){
@@ -22,4 +25,18 @@ fun sum(a: Int, b: Int): Int {
 
 fun sub(a: Int, b: Int): Int{
     return a - b
+}
+
+fun showProduct(name: String, promo: String = "No promotion", validity: String = "0 stock"){
+    println("$name = $promo until $validity")
+}
+fun showPersons(vararg persons: String){
+    for(person in persons){
+        println(person)
+    }
+    var index = 0
+    while(index < persons.size){
+        println(persons[index])
+        index++
+    }
 }
