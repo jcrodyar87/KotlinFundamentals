@@ -18,4 +18,8 @@ fun main(){
     println(users)
     users.removeAt(1)
     println(users)
+
+    val usersMap = mutableMapOf<Int, User>()
+    usersMap.put(myUser.id.toInt(), myUser)
+    println(usersMap)
 }
