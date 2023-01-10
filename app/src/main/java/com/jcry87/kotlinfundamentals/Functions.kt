@@ -10,7 +10,7 @@ fun main(){
     println("$a - $b = ${sub(a,b)}")
 
     showProduct("Juice", validity = "15th March")
-    showPersons("Juan","Carlos","Silvia")
+    showPersons("Juan","Carlos","Silvia","Elizabeth","Mary")
 }
 
 private fun sayHello(){
@@ -38,5 +38,15 @@ fun showPersons(vararg persons: String){
     while(index < persons.size){
         println(persons[index])
         index++
+    }
+
+    newTopic("when")
+    index = (0..persons.size - 1).random()
+    println(index)
+    when(persons[index]){
+        "Angel" -> println("It's an angel!")
+        "Mary" -> {
+            println("It's Mary Jane")
+        }
     }
 }
